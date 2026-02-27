@@ -22,7 +22,7 @@ export function attachWebSocketServer(server) {
   });
 
   wss.on("connection", (socket) => {
-    sendJson(socket, { tye: "welcome" });
+    sendJson(socket, { type: "welcome" });
     socket.isAlive = true;
     socket.on("pong", () => {
       socket.isAlive = true;
